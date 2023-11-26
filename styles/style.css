@@ -1,0 +1,119 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+nav div img {
+  height: 10rem;
+  width: 10rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-right: 2rem;
+  padding: 0;
+}
+
+nav ul li {
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 1rem;
+  padding: 0;
+}
+
+a.nav-link {
+  color: white;
+}
+
+a.active {
+  border-bottom: 2px solid #4d97b4;
+}
+
+a.nav-link:hover {
+  color: #4d97b4;
+}
+
+.secondary-nav {
+  border-bottom: #162d35 solid 2px;
+  margin-bottom: 2rem;
+  background-color: white;
+  z-index: 1;
+}
+
+.secondary-nav .secondary-nav-links a.nav-link {
+  color: black;
+}
+
+.secondary-nav .secondary-nav-links a.nav-link:hover {
+  color: #4d97b4;
+}
+
+h1 {
+  font-family: "Exo 2";
+  font-size: 5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: solid 2px #4d97b4;
+}
+
+h2 {
+  font-family: "Exo 2";
+  font-size: 4rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: solid 2px #4d97b4;
+}
+
+h3 {
+  font-family: "Roboto Mono";
+  font-size: 3rem;
+}
+
+p {
+  font-family: "Roboto Mono";
+  font-size: 1.25rem;
+}
+
+footer {
+  background-color: #4d97b4;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+footer #footer-table {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer address {
+  font-family: "Roboto Mono";
+  font-size: 1.25rem;
+}
+
+#footer-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; /* Adjust as needed */
+  align-items: center;
+}
