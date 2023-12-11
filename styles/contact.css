@@ -1,6 +1,6 @@
 section {
   margin: 20px;
-  padding: 11rem 20px 20px 20px;
+  padding: 15vh 20px 20px 20px;
   border-radius: 5px;
 }
 
@@ -10,7 +10,8 @@ section #form-title {
 }
 
 section #contact-form {
-  width: 45%;
+  width: 100%; /* Full width on small screens */
+  max-width: 600px; /* Limit the width on larger screens */
   background-color: #f5f5f5;
   padding: 2rem;
   margin-left: auto;
@@ -37,16 +38,12 @@ textarea {
 
 .name-group {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow the flex items to wrap to the next line on smaller screens */
 }
 
 .name-group .first-name {
   flex: 1;
   margin-right: 1rem;
-}
-
-.phone-container .phone-input {
-  display: flex;
 }
 
 .phone-container .phone-input input[type="text"] {
@@ -96,4 +93,23 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #162c37;
   color: white;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 576px) {
+  h3 {
+    font-family: "Exo 2";
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .name-group .first-name {
+    margin-right: 0; /* Remove the right margin for smaller screens */
+  }
+
+  .phone-container .phone-input,
+  .phone-container .phone-options {
+    flex-direction: column; /* Stack phone input and options in a column on smaller screens */
+  }
 }

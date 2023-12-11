@@ -1,13 +1,14 @@
 nav {
-  position: fixed;
-  background-color: rgba(64, 64, 64, 0.5);
+  position: relative;
+  background-color: rgba(64, 64, 64, 0.3);
+  border-bottom: #162c37 1px solid;
   z-index: 2;
 }
 
 #landing {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url(../Images/temp.jpg);
   background-size: cover;
   background-position: center;
@@ -35,60 +36,100 @@ nav {
 #projects-header {
   width: 65%;
   text-align: center;
-  margin: 45vh auto;
+  margin: 33vh auto;
+  padding-top: 2rem;
 }
 
-.project-card {
-  width: 100%;
-  height: 75vh;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  position: relative;
+.carousel {
+  height: 90vh;
+  width: 80vw;
+  margin: 2rem auto 5rem auto;
+  border: solid 2px gray;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-.project-card img {
-  width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-
-.project-card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.carousel-item img {
+  object-fit: cover;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  opacity: 0;
-  transition: 0.6s;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.project-card:hover .project-card-overlay {
+.carousel-item .carousel-text {
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.carousel-item .button-slide {
+  display: block;
+}
+
+.carousel-item button {
+  background-color: #4d97b4;
+  color: rgb(69, 69, 69);
+  font-size: 1.5rem;
+  width: 15rem;
+  height: 5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.carousel-item button:hover {
+  background-color: #162c37;
+  color: white;
+}
+
+.carousel-caption {
+  background-color: rgba(245, 245, 245, 0.75);
+  color: rgb(69, 69, 69);
+  border-radius: 2rem;
+  margin: 0 auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  opacity: 0.75;
+  color: #4d97b4;
+  border: none;
+  border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: rgb(69, 69, 69);
+  background-color: #4d97b4;
+  border: 3rem;
+  padding: 3rem 0.5rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
   opacity: 1;
 }
 
-.project-card-overlay p {
-  width: 65%;
-  margin-left: auto;
-  margin-right: auto;
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
 }
 
 #home-buttons {
-  width: 100%;
   text-align: center;
   margin: 35vh auto 20vh auto;
 }
 
 #home-buttons button {
   background-color: #4d97b4;
-  color: black;
+  color: rgb(69, 69, 69);
   font-size: 1.5rem;
   width: 15rem;
   height: 5rem;
@@ -102,4 +143,145 @@ nav {
 #home-buttons button:hover {
   background-color: #162c37;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 60vh;
+    width: 80vw;
+    margin: 2rem auto 5rem auto;
+    border: solid 2px gray;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .carousel-item .carousel-text {
+    width: 100%;
+    text-align: center;
+    margin: 1rem auto;
+  }
+
+  .carousel-item .button-slide {
+    display: block;
+  }
+
+  .carousel-item button {
+    background-color: #4d97b4;
+    color: rgb(69, 69, 69);
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  .carousel-item button:hover {
+    background-color: #162c37;
+    color: white;
+  }
+
+  .carousel-caption {
+    background-color: rgba(245, 245, 245, 0.75);
+    color: rgb(69, 69, 69);
+    border-radius: 2rem;
+    margin: 0 auto;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+    opacity: 0.75;
+    color: #4d97b4;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    color: rgb(69, 69, 69);
+    background-color: #4d97b4;
+    border: 3rem;
+    padding: 3rem 0.5rem;
+  }
+
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    opacity: 1;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .modal-dialog {
+    width: 90%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+  }
+
+  .modal-body {
+    background-color: lightgray;
+  }
+
+  .modal-footer button {
+    background-color: #4d97b4;
+    color: white;
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 1rem;
+  }
+
+  .modal-footer button:hover {
+    background-color: #162c37;
+  }
+
+  #home-buttons {
+    text-align: center;
+    margin: 35vh auto 20vh auto;
+  }
+
+  #home-buttons button {
+    background-color: #4d97b4;
+    color: white;
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 1rem 2rem 1rem;
+  }
+
+  #home-buttons button:hover {
+    background-color: #162c37;
+    color: white;
+  }
 }
